@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivani</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('ccc.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            backdrop-filter: blur(6px);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+      
+        .custom-navbar {
+            background-color: #8ABF14;
+            height: 45px; 
+            width: 100%; 
+            color: white; 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-brand span {
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+        .navbar-brand span:hover {
+            color: #FFC107;
+            cursor: pointer;
+        }
+        .contact-info {
+            display: flex; 
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .contact-info .navbar-brand {
+            margin-right: 20px;
+        }
+        .hi-navbar {
+            background-color: #8ABF14;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hi-navbar .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hi-navbar .nav-link {
+            color: white !important;
+            padding: 10px 25px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .hi-navbar .nav-link:hover {
+            color: #FFC107 !important;
+        }
+        .navbar-logo {
+            position: absolute;
+            top: 0;
+            left: 1px;
+            z-index: 10;
+            width: 200px;
+            height:50px;
+        }
+
+     
+        .row {
+            display: flex;
+            flex: 1;
+            padding: 50px;
+            gap: 30px;
+        }
+
+        
+        .col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 90px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        button {
+            width:fit-content;
+            padding:10px;
+            font-size: 30px;
+            color: black;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);            ;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #f0ad4e;
+        }
+
+        
+        .cards-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card, .card2, .card3, .card4 {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover, .card2:hover, .card3:hover, .card4:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img, .card2 img, .card3 img, .card4 img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h2, .card2 h2, .card3 h2, .card4 h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p, .card2 p, .card3 p, .card4 p {
+            font-size: 14px;
+            padding: 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="ivanilogo.png" alt="Logo" class="navbar-logo">
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="contact-info">
+            <a class="navbar-brand" href="#">
+                <img src="call.png" alt="+91-969-999-9244" >
+                <span>+91-969-999-9244</span> 
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="Untitled_design_3.png" alt="jdcbattery@gmail.com" >
+                <span>jdcbattery@gmail.com</span>
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg hi-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="Home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="Products.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+                <a href="about" class="nav-link">Our Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+   
+    <div class="row">
+       
+        <div class="col">
+            <h1>Ivani</h1>
+            <p>Power of the Sun</p>
+            <button type="button">Explore</button>
+        </div>
+
+        
+        <div class="cards-container">
+            <div class="card">
+                <h2>Battery 1</h2>
+                <img src="IMG-20241202-WA0021.jpg" alt="Battery 1">
+            </div>
+            <div class="card2">
+                <h2>Battery 2</h2>
+                <img src="https://via.placeholder.com/200x150" alt="Battery 2">
+            </div>
+            <div class="card3">
+                <h2>Battery 3</h2>
+                <img src="https://via.placeholder.com/200x150" alt="Battery 3">
+            </div>
+            <div class="card4">
+                <h2>Battery 4</h2>
+                <img src="https://via.placeholder.com/200x150" alt="Battery 4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("bqMwcsnVrNV-3RTMm");
+      })();
+    </script>
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+
+
+         html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('modern-aesthetic-white-polygonal-background-with-a-blue-spot-vector.jpg');
+        }
+        
+        .custom-navbar {
+            background-color: #8ABF14;
+            height: 45px; 
+            width: 100%; 
+            color: white; 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-brand span {
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+        .navbar-brand span:hover {
+            color: #FFC107;
+            cursor: pointer;
+        }
+        .contact-info {
+            display: flex; 
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .contact-info .navbar-brand {
+            margin-right: 20px;
+        }
+        .hi-navbar {
+            background-color: #8ABF14;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hi-navbar .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hi-navbar .nav-link {
+            color: white !important;
+            padding: 10px 25px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .hi-navbar .nav-link:hover {
+            color: #FFC107 !important;
+        }
+        .navbar-logo {
+            position: absolute;
+            top: 0;
+            left: 1px;
+            z-index: 10;
+            width: 200px;
+            height: 108px;
+        }
+        .conta{
+    position: relative !important;
+    background-image: url('contact-us-bg.jpg') !important;
+    background-size: cover !important;
+    height: 680px !important;
+    text-align: center !important;
+    color: white !important;
+    padding: 20px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+h1{
+    text-align: left !important;
+    margin-left: 12% !important;
+    margin-top: 5% !important;
+    font-size: 75px !important;
+    text-shadow: 2px 2px 5px rgba(23, 68, 2, 0.7) !important;
+}
+
+.contt{
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+}
+
+.cardd{
+    background: linear-gradient(to left, #4CAF50, black) !important;
+    color: white !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    width: 300px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 60px !important;
+    height: 350px !important;
+    border: 3px solid white !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardd h1{
+    font-size: 20px !important;
+    text-align: center !important;
+    margin-right: 12% !important;
+    
+}
+
+.card-icon {
+    width: 50px !important;
+    margin-bottom: 15px !important;
+}
+
+.cardd img{
+    width: 60% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
+
+.cardd p{
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+    font-size: 16px !important;
+}
+.cardd a{
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+    font-size: 16px !important;
+
+}
+
+.form-container {
+    background: white !important;
+    padding: 30px !important;
+    width: 90% !important; /* Use percentage width to allow responsiveness */
+    max-width: 600px !important; /* Optional: Set a max-width to prevent it from growing too large */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    border: 3px solid rgba(0, 0, 0, 0.4) !important;
+    margin-top: 100px !important; /* Adjusted for better spacing */
+    margin-left: auto;
+    margin-right: auto; /* Center the form horizontally */
+    height: auto !important; /* Adjust height to fit content */
+}
+
+
+input, textarea {
+    
+    width: 100% !important; /* Ensure inputs and textareas fit within the form */
+    padding: 10px 15px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999 !important;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50 !important;
+}
+
+.input-group {
+    margin-bottom: 20px !important;
+    text-align: left !important;
+}
+
+.split {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.phone-input {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.phone-input input {
+    flex: 1 !important; 
+}
+
+.country-code {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.btn-submit {
+    background-color: #06a878 !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+}
+
+.btn-submit:hover {
+    background-color: green !important;
+}
+
+.btn-submit i {
+    font-size: 18px !important;
+}
+
+.yo {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.yo h1{
+    font-size: 90px !important;
+    margin-top: 180px !important;
+}
+
+.yo p{
+    font-size: 30px !important;
+}
+
+
+footer{
+            
+            height: auto;
+            width:100%;
+            background-color: #243206;
+            color:white;
+            position:relative;
+            bottom:0;
+            right:0;
+            margin-top: 500px;
+        }
+        .no{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .yess1{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: transform 0.5s ease;
+        }
+        .yess2, .yess3, .yess4{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+      
+        }
+        .yess1 p, img{
+            margin:10px;
+        }
+        .yess2 ul li a, .yess3 ul li a{
+            list-style: none;
+            color:white;
+            text-decoration: none;
+            margin-bottom:5px;
+            display: inline-block;
+            transition:transform 0.5s ease;
+        }
+      
+        .yess2 h3, .yess3 h3, .yess4 h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .flexflez{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .yess2 ul li a:hover, 
+        .yess3 ul li a:hover {
+            transform: scale(1.1);
+            color: yellow; 
+        }
+        .yess2 h3, .yess3 h3, .yess4 h3{
+       
+            margin-top:10px;
+        }
+        .row-flez{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .ciao{
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ciao a{
+            color:white;
+            margin:10px;
+            }
+            .ciao p{
+                margin:10px;
+            
+}
+/* Media Queries for smaller screens (phone/tablet) */
+
+
+
+/* Media Query for very small screens (under 480px) */
+@media (max-width: 480px) {
+    
+    
+   
+
+    /* Navbar logo */
+    .navbar-logo {
+        width: 100px !important;  /* Force resizing */
+        height: 80px !important;
+        left: 0px; /* Adjust for smaller screens */
+    }
+
+    /* Custom Navbar */
+    .custom-navbar {
+        flex-direction: row; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .contact-info {
+        flex-direction: row; /* Stack contact info vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info .navbar-brand {
+        margin-right: 12px; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .contact-info img {
+        width: 20px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .contact-info .navbar-brand span {
+        font-size: 10px; /* Reduce font size */
+    }
+
+    /* Hi Navbar */
+    .hi-navbar {
+        flex-direction: row; /* Stack links vertically */
+        padding: 10px 0;
+    }
+
+    .hi-navbar .navbar-nav {
+        flex-direction: row; /* Align links vertically */
+        gap: 5px;
+    }
+
+    .hi-navbar .nav-link {
+        font-size: 12px; /* Reduce font size */
+        padding: 8px; /* Adjust padding */
+    }
+   /* Media Query for very small screens (under 480px) */
+
+
+
+   .conta {
+        background-size: cover !important; /* Ensure the background covers the container */
+        background-position: center center !important; /* Center the background image */
+        height: 400px !important; /* Adjust height to ensure the background fits better */
+        text-align: center !important;
+        padding: 20px 10px !important; /* Add padding for responsiveness */
+    }
+
+    .conta h1 {
+        font-size: 30px !important; /* Reduce heading size for smaller screens */
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        text-align: center !important; /* Center the heading */
+    }
+}
+
+/* Media Query for screens up to 480px */
+@media (max-width: 480px) {
+
+    /* Cards section */
+    .contt {
+        display: flex; 
+        flex-direction: column; /* Stack cards vertically */
+        justify-content: center; /* Center cards */
+        align-items: center; /* Align cards to the center */
+        gap: 10px; /* Add space between cards */
+        padding: 10px; 
+        width: 100%; /* Full container width */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    /* Individual card styles */
+    .cardd {
+        width: 90%; /* Make cards take up most of the screen width */
+        max-width: 300px; /* Ensure cards don't get too wide */
+        height: auto; 
+        display: flex; 
+        flex-direction: column; /* Stack card content vertically */
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px; 
+        border: 2px solid white; 
+        text-align: center; 
+        font-size: 12px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+
+    .cardd img {
+        width: 100%; /* Fit the image to card width */
+        height: auto; 
+        border-radius: 5px;
+    }
+
+    .cardd h1 {
+        font-size: 14px; /* Slightly increase heading size */
+        margin-bottom: 5px;
+    }
+
+    .cardd p {
+        font-size: 12px; /* Adjust paragraph font size */
+        line-height: 1.5; /* Improve line height for readability */
+    }
+
+    /* "Get In Touch" form section */
+    .yo {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    order: -1; /* Move .yo above the form container */
+}
+
+.yo h1 {
+    font-size: 24px; /* Adjust heading size for smaller screens */
+    margin-top: 10px;
+}
+
+.yo p {
+    font-size: 14px; /* Adjust paragraph size */
+    margin-left: 0; /* Remove extra margin */
+    text-align: center; /* Center-align text */
+}
+
+/* Form container styles */
+.form-container {
+    width: 90% !important; /* Reduce width */
+        max-width: 400px !important; /* Optional max width */
+        margin: 10px auto !important; /* Center horizontally */
+        padding: 15px;
+}
+
+/* Heading inside form container */
+.form-container h1 {
+    font-size: 20px; /* Adjust heading size for better readability */
+    text-align: center; /* Center-align heading */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+/* Input and Textarea styles */
+input, textarea {
+    font-size: 14px; /* Maintain readability */
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Add padding for comfort */
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* Light background for inputs */
+}
+
+/* Submit Button */
+.btn-submit {
+    font-size: 14px; 
+    padding: 10px 15px;
+    width: 100%; /* Ensure button takes full width */
+    box-sizing: border-box; /* Include padding in width */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.btn-submit:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+  
+footer {
+        margin-top: 0;
+        padding-left: 20px !important;
+        
+    }
+    
+    .no {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .yess1, .yess2, .yess3, .yess4 {
+        align-items: flex-start;
+    }
+
+    .yess2 ul, .yess3 ul {
+        padding-left: 0;
+    }
+
+    .yess2 ul li, .yess3 ul li {
+        margin: 5px 0;
+    }
+
+    .yess2 h3, .yess3 h3, .yess4 h3 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .flexflez {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .row-flez {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .ciao {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ciao a {
+        margin: 5px;
+    }
+
+    .ciao p {
+        margin: 5px;
+    }
+}
+
+
+.navbar-logo {
+               width:150px;
+                height: 108px;
+                margin-top: 0px;
+                margin-left: 0px;}
+
+                .display {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+          }
+          #product {
+      
+            cursor: pointer;
+          }
+          .dropdown {
+            background-color: #8ABF14;
+            width: fit-content;
+            display: none;
+            position: absolute; 
+            border:1px solid black;
+    top: 100%; 
+    left: 60px; 
+    z-index: 100; 
+            z-index: 100; 
+            border-radius: 5px; 
+        }
+        
+          .dropdown ul {
+            list-style-type: none;
+            padding: 10px;
+            padding-bottom: 20px;
+            margin: 0;
+            font-size: 12px;
+          }
+          .dropdown ul li {
+            padding: 0px;
+            margin: 0;
+            font-size: 18px;
+       
+          }
+          .dropdown ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            display: block;
+          }
+          .dropdown ul li a:hover {
+            background-color: #243206;
+            color: white;
+          }
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <img src="ivanilogo.png" alt="Logo" class="navbar-logo">
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="contact-info">
+            <a class="navbar-brand" href="#">
+                <img src="call.png" alt="+91-969-999-9244" width="50" height="50">
+                <span>+91-969-999-9244</span> 
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="email.png" alt="jdcbattery@gmail.com" width="50" height="50">
+                <span>jdcbattery@gmail.com</span>
+            </a>
+        </div>
+    </nav>
+
+   
+    <nav class="navbar navbar-expand-lg hi-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About Us</a>
+            </li>
+            <div class="display">
+                <li class="nav-item">
+                    <a href="Products.html" class="nav-link" id="product">Products</a>
+                </li>
+                <div class="dropdown">
+                    <ul>
+                      <li><a href="i.html">Invertor Batteries</a></li>
+                      <li><a href="./product1.html">Automotive Batteries</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Our Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="conta">
+        <h1>Contact Us</h1>
+
+    </div>
+
+    <div class="contt">
+        <div class="cardd">
+            <h1>Address</h1>
+           <img src="OIP-removebg-preview.png">
+           <a href="https://www.google.co.in/maps/search/Plot+No.230,+G.I.D.C,+Taluka:+Sidhpur,+Dist.:Patan,+Gujurat+-+384+151/@23.9443824,72.3560813,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"> Plot No.230, G.I.D.C, Taluka: Sidhpur, Dist.:Patan, Gujurat - 384 151</a>
+          
+           
+        </div>
+        <div class="cardd">
+            <h1>Call Us</h1>
+            
+            <img src="tel.png">
+            <a href="tel:9762541380">+91-969-999-9244</a>
+            
+        </div>
+        <div class="cardd">
+            <h1>Email Us</h1>
+            <img src="green-email-icon-9.jpg">
+            <a href="jdcbattery@gmail.com">jdcbattery@gmail.com</a>
+           
+            
+        </div>
+    </div>
+    <div class="yo">
+        
+      </div>
+    <div class="form-container">
+        <h1>Get In Touch</h1>
+       
+          <div class="input-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+              <input type="text" id="company" placeholder="Company Name">
+            </div>
+            <div class="input-group split">
+              <input type="email" id="email" placeholder="Email" required>
+              <div class="phone-input">
+                <span class="country-code">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="India" width="20">
+                  +91
+                </span>
+                <input type="tel" id="phone" placeholder="Phone" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <textarea id="message" placeholder="Leave us a message..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" onclick="sendMail()">
+              <i class="fa fa-paper-plane"></i> Send Message
+            </button>
+      
+      </div>
+
+      <div class="yo">
+        <div class="call">
+            <h1> Contact Us</h1>
+            <p>Contact us anytime for assistance or inquiries.</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="no">
+            <div class="yess1">
+                <img src="./ivanilogo.png" height="40" width="80">
+                <p>Delivering cutting-edge <br>technology solutions and driving<br> innovation for a smarter<br> future.</p>
+            </div>
+            <div class="yess2">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="">Automotive Batteries</a></li>
+                    <li><a href="">Invertor Batteries</a></li>
+                </ul>
+            </div>
+            <div class="yess3">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="">Tips to maintain <br>your old <br>invertor</a></li>
+                    <li><a href="">Recycling old batteries</a></li>
+                    <li><a href="">How to choose <br>the right car<br> battery</a></li>
+                </ul>
+            </div>
+            <div class="yess4">
+                <h3>Contact Us</h3>
+                <div class="flexflez">
+                    <img src="./call.png" height="40" width="40">
+                    <p>+91 1234567890</p>
+                </div>
+                <div class="flexflez">
+                    <img src="./email.png" height="40" width="40">
+                 <p>jdcbattery@gmail.com</p>
+                </div>
+            </div>
+        </div>
+       
+     <div class="ciao">
+        <p>Copyright @2024 <a href="">Ivani</a>. All rights reserved by Ivani</p>
+        <div class="row-flez">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+        </div>
+    </div>
+    </footer>
+
+</div>
+<script>
+    const animatedElements = document.querySelectorAll('.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12');
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); 
+        } else {
+            entry.target.classList.remove('visible'); 
+        }
+    });
+}, {
+    threshold: 0.4
+});
+
+
+animatedElements.forEach(el => observer.observe(el));
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    var product = document.getElementById('product');
+    var dropdown = document.querySelector('.dropdown');
+
+    product.addEventListener('mouseenter', function(){
+      dropdown.style.display = 'block';
+    });
+
+
+    product.addEventListener('mouseleave', function(){
+      setTimeout(function(){
+        if (!dropdown.matches(':hover')) {
+          dropdown.style.display = 'none';
+        }
+      }, 100); 
+    });
+
+  
+    dropdown.addEventListener('mouseenter', function() {
+      dropdown.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseleave', function(){
+      dropdown.style.display = 'none';
+    });
+  });
+  </script>
+</body>
+</html>

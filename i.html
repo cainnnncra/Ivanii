@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height:100vh;
+            width:auto;
+            box-sizing: border-box;
+            
+      
+            background-size: cover;
+     background-position: center;
+            font-family: 'Poppins', sans-serif;
+
+        }
+      
+        .custom-navbar {
+            background-color: #8ABF14;
+            height: 45px; 
+            width: 100%; 
+            color: white; 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-brand span {
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+        .navbar-brand span:hover {
+            color: #FFC107;
+            cursor: pointer;
+        }
+        .contact-info {
+            display: flex; 
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .contact-info .navbar-brand {
+            margin-right: 20px;
+        }
+        .hi-navbar {
+            background-color: #8ABF14;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hi-navbar .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hi-navbar .nav-link {
+            color: white !important;
+            padding: 10px 25px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .hi-navbar .nav-link:hover {
+            color: #FFC107 !important;
+        }
+        .navbar-logo {
+            position: absolute;
+            top: 0;
+            left: 1px;
+            z-index: 10;
+            width: 200px;
+            height: 108px;
+        }
+        .video-div {
+            display: flex;
+            justify-content: center;
+            position: relative; 
+            width: 100%;
+        }
+        
+        #video-tag {
+            width: 100%;
+            height: 300px;
+            opacity: 0.7;
+            object-fit: cover;
+        }
+        
+        .video-div h1 {
+            font-size: 60px;;
+            margin-bottom: 1rem;
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            color: white; 
+            z-index: 1; 
+        }
+        .battery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 100px;
+            padding: 10px;
+            justify-items: center; 
+        }
+        
+        .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12 {
+            background-color: rgb(202, 197, 197);
+            padding: 10px;
+            border-radius: 40px;
+            box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease, transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;;
+        }
+        
+        .grid1.visible, .grid2.visible, .grid3.visible, .grid4.visible, .grid5.visible, .grid6.visible, .grid7.visible, .grid8.visible, .grid9.visible, .grid10.visible, .grid11.visible, .grid12.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .battery-grid img {
+            height: 200px;
+            width: 300px;
+        }
+        .for-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;;
+        }
+        .flex1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap:30px;
+        }
+        #x{
+            transition: transform 0.3s ease;
+        }
+        #x:hover {
+            transform: scale(1.1);
+        }
+        .display {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+          }
+          #product {
+      
+            cursor: pointer;
+          }
+          .dropdown {
+            background-color: #8ABF14;
+            width: fit-content;
+            display: none;
+            position: absolute; 
+            border:1px solid black;
+    top: 100%; 
+    left: 60px; 
+    z-index: 100; 
+            z-index: 100; 
+            border-radius: 5px; 
+        }
+        
+          .dropdown ul {
+            list-style-type: none;
+            padding: 10px;
+            padding-bottom: 20px;
+            margin: 0;
+            font-size: 12px;
+          }
+          .dropdown ul li {
+            padding: 0px;
+            margin: 0;
+            font-size: 18px;
+       
+          }
+          .dropdown ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            display: block;
+          }
+          .dropdown ul li a:hover {
+            background-color: #243206;
+            color: white;
+          }
+        #test{
+            font-size:18px;
+            transition: transform 0.3s ease;
+        }
+        #test:hover {
+            transform: scale(1.1);
+        }
+        
+        footer{
+            height: auto;
+            width:100%;
+            background-color: #243206;
+            color:white;
+            position:relative;
+            bottom:0;
+            right:0;
+            margin-top: 100px;
+        }
+        .no{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .yess1{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: transform 0.5s ease;
+        }
+        .yess2, .yess3, .yess4{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+      
+        }
+        .yess1 p, img{
+            margin:10px;
+        }
+        .yess2 ul li a, .yess3 ul li a{
+            list-style: none;
+            color:white;
+            text-decoration: none;
+            margin-bottom:5px;
+            display: inline-block;
+            transition:transform 0.5s ease;
+        }
+      
+        .yess2 h3, .yess3 h3, .yess4 h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .flexflez{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .yess2 ul li a:hover, 
+        .yess3 ul li a:hover {
+            transform: scale(1.1);
+            color: yellow; 
+        }
+        .yess2 h3, .yess3 h3, .yess4 h3{
+            margin-top:10px;
+        }
+        .row-flez{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .ciao{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ciao a{
+            color:white;
+            margin:10px;
+        }
+        .ciao p{
+            margin:10px;
+        }
+        .navbar-logo {
+            width:150px;
+            height: 109px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+        @media (max-width: 480px) {
+    
+    
+   
+
+    /* Navbar logo */
+    .navbar-logo {
+        width: 100px !important;  /* Force resizing */
+        height: 80px !important;
+        left: 0px; /* Adjust for smaller screens */
+    }
+
+    /* Custom Navbar */
+    .custom-navbar {
+        flex-direction: row; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .contact-info {
+        flex-direction: row; /* Stack contact info vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info .navbar-brand {
+        margin-right: 12px; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .contact-info img {
+        width: 20px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .contact-info .navbar-brand span {
+        font-size: 10px; /* Reduce font size */
+    }
+
+    /* Hi Navbar */
+    .hi-navbar {
+        flex-direction: row; /* Stack links vertically */
+        padding: 10px 0;
+    }
+
+    .hi-navbar .navbar-nav {
+        flex-direction: row; /* Align links vertically */
+        gap: 5px;
+    }
+
+    .hi-navbar .nav-link {
+        font-size: 12px; /* Reduce font size */
+        padding: 8px; /* Adjust padding */
+    }
+    footer {
+        margin-top: 0;
+    }
+    
+    .no {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .yess1, .yess2, .yess3, .yess4 {
+        align-items: flex-start;
+    }
+
+    .yess2 ul, .yess3 ul {
+        padding-left: 0;
+    }
+
+    .yess2 ul li, .yess3 ul li {
+        margin: 5px 0;
+    }
+
+    .yess2 h3, .yess3 h3, .yess4 h3 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .flexflez {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .row-flez {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .ciao {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ciao a {
+        margin: 5px;
+    }
+
+    .ciao p {
+        margin: 5px;
+    }
+}
+    </style>
+</head>
+<body>
+   
+    <img src="ivanilogo.png" alt="Logo" class="navbar-logo">
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="contact-info">
+            <a class="navbar-brand" href="#">
+                <img src="call.png" alt="+91-969-999-9244" width="50" height="50">
+                <span>+91-969-999-9244</span> 
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="email.png" alt="jdcbattery@gmail.com" width="50" height="50">
+                <span>jdcbattery@gmail.com</span>
+            </a>
+        </div>
+    </nav>
+
+   
+    <nav class="navbar navbar-expand-lg hi-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About Us</a>
+            </li>
+            <div class="display">
+                <li class="nav-item">
+                    <a href="product1.html" class="nav-link" id="product">Products</a>
+                </li>
+                <div class="dropdown">
+                    <ul>
+                      <li><a href="i.html">Invertor Batteries</a></li>
+                      <li><a href="./product1.html">Automotive Batteries</a></li>
+                    </ul>
+                  </div>
+            </div>
+           
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Our Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="video-div">
+        <video id="video-tag" autoplay muted loop>
+            <source src="./video1.mp4" type="video/mp4">
+        </video>
+        <h1>Invertor Batteries</h1>
+    </div>
+    <div class="battery-grid">
+            <div class="grid1" >
+                <div class="for-flex" id="x">
+                    <h2>IVIT-500</h2>
+                    <img src="./IVIT-500.png">
+                </div>
+                <p id="test" onclick="window.location.href='./home1.html'">View Product >></p>
+            </div>  
+    </div>
+    
+
+      <footer>
+        <div class="no">
+            <div class="yess1">
+                <img src="./ivanilogo.png" height="40" width="80">
+                <p>Delivering cutting-edge <br>technology solutions and driving<br> innovation for a smarter<br> future.</p>
+            </div>
+            <div class="yess2">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="">Automotive Batteries</a></li>
+                    <li><a href="">Invertor Batteries</a></li>
+                </ul>
+            </div>
+            <div class="yess3">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="">Tips to maintain <br>your old <br>invertor</a></li>
+                    <li><a href="">Recycling old batteries</a></li>
+                    <li><a href="">How to choose <br>the right car<br> battery</a></li>
+                </ul>
+            </div>
+            <div class="yess4">
+                <h3>Contact Us</h3>
+                <div class="flexflez">
+                    <img src="./call.png" height="40" width="40">
+                    <p>+91 1234567890</p>
+                </div>
+                <div class="flexflez">
+                    <img src="./email.png" height="40" width="40">
+                 <p>jdcbattery@gmail.com</p>
+                </div>
+            </div>
+        </div>
+       
+     <div class="ciao">
+        <p>Copyright @2024 <a href="">Ivani</a>. All rights reserved by Ivani</p>
+        <div class="row-flez">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+        </div>
+    </div>
+    </footer>
+</body>
+
+<script>
+        
+    const animatedElements = document.querySelectorAll('.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12');
+
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); 
+            } else {
+                entry.target.classList.remove('visible'); 
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+ 
+    animatedElements.forEach(el => observer.observe(el));
+
+
+    document.addEventListener('DOMContentLoaded', function(){
+        var product = document.getElementById('product');
+        var dropdown = document.querySelector('.dropdown');
+
+        product.addEventListener('mouseenter', function(){
+          dropdown.style.display = 'block';
+        });
+  
+
+        product.addEventListener('mouseleave', function(){
+          setTimeout(function(){
+            if (!dropdown.matches(':hover')) {
+              dropdown.style.display = 'none';
+            }
+          }, 100); 
+        });
+  
+      
+        dropdown.addEventListener('mouseenter', function() {
+          dropdown.style.display = 'block';
+        });
+  
+        dropdown.addEventListener('mouseleave', function(){
+          dropdown.style.display = 'none';
+        });
+      });
+</script>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('modern-aesthetic-white-polygonal-background-with-a-blue-spot-vector.jpg');
+        }
+        
+        .custom-navbar {
+            background-color: #8ABF14;
+            height: 45px; 
+            width: 100%; 
+            color: white; 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-brand span {
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+        .navbar-brand span:hover {
+            color: #FFC107;
+            cursor: pointer;
+        }
+        .contact-info {
+            display: flex; 
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .contact-info .navbar-brand {
+            margin-right: 20px;
+        }
+        .hi-navbar {
+            background-color: #8ABF14;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hi-navbar .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hi-navbar .nav-link {
+            color: white !important;
+            padding: 10px 25px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .hi-navbar .nav-link:hover {
+            color: #FFC107 !important;
+        }
+        .navbar-logo {
+            position: absolute;
+            top: 0;
+            left: 1px;
+            z-index: 10;
+            width: 200px;
+            height: 101px;
+        }
+   
+        @media (max-width: 480px) {
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    .navbar-logo {
+        width: 100px !important;  /* Force resizing */
+        height: 80px !important;
+        left: 0px; /* Adjust for smaller screens */
+    }
+
+    /* Custom Navbar */
+    .custom-navbar {
+        flex-direction: row; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .contact-info {
+        flex-direction: row; /* Stack contact info vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info .navbar-brand {
+        margin-right: 12px; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .contact-info img {
+        width: 20px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .contact-info .navbar-brand span {
+        font-size: 10px; /* Reduce font size */
+    }
+
+    /* Hi Navbar */
+    .hi-navbar {
+        flex-direction: row; /* Stack links vertically */
+        padding: 10px 0;
+    }
+
+    .hi-navbar .navbar-nav {
+        flex-direction: row; /* Align links vertically */
+        gap: 5px;
+    }
+
+    .hi-navbar .nav-link {
+        font-size: 12px; /* Reduce font size */
+        padding: 8px; /* Adjust padding */
+    }
+    footer {
+        margin-top: 0;
+    }
+    
+    .no {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .yess1, .yess2, .yess3, .yess4 {
+        align-items: flex-start;
+    }
+
+    .yess2 ul, .yess3 ul {
+        padding-left: 0;
+    }
+
+    .yess2 ul li, .yess3 ul li {
+        margin: 5px 0;
+    }
+
+    .yess2 h3, .yess3 h3, .yess4 h3 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .flexflez {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .row-flez {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .ciao {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ciao a {
+        margin: 5px;
+    }
+
+    .ciao p {
+        margin: 5px;
+    }}
+
+    /* Video Section */
+    .video-div {
+        margin-bottom: 20px;
+    }
+
+    #video-tag {
+        height: 300px; /* Reduce video height */
+        width: 100%;
+    }
+
+    .video-div h1 {
+        font-size: 50px; /* Reduce font size */
+        margin-top: 15%; /* Adjust position */
+        margin-right: 0; /* Center-align */
+        text-align: center;
+    }
+    .video-div {
+            display: flex;
+            justify-content: center;
+            position: relative; 
+            width: 100%;
+            margin-bottom: 100px;
+        }
+        
+        #video-tag {
+            width: 100%;
+            height: 650px;
+            opacity: 0.9;
+            
+            object-fit: cover;
+        }
+        
+        .video-div h1 {
+            font-size: 110px;;
+            margin-top: 10% ;
+            position: absolute; 
+         margin-right: 800px;
+            transform: translate(-50%, -50%); 
+            color: white; 
+            z-index: 1; 
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;}
+        header {
+            background-color: #8ABF14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            color: #3a8d40;
+        }
+        footer{
+            
+            height: auto;
+            width:100%;
+            background-color: #243206;
+            color:white;
+            position:relative;
+            bottom:0;
+            right:0;
+            margin-top: 100px;
+        }
+        .no{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .yess1{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: transform 0.5s ease;
+        }
+        .yess2, .yess3, .yess4{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+      
+        }
+        .yess1 p, img{
+            margin:10px;
+        }
+        .yess2 ul li a, .yess3 ul li a{
+            list-style: none;
+            color:white;
+            text-decoration: none;
+            margin-bottom:5px;
+            display: inline-block;
+            transition:transform 0.5s ease;
+        }
+      
+        .yess2 h3, .yess3 h3, .yess4 h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .flexflez{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .yess2 ul li a:hover, 
+        .yess3 ul li a:hover {
+            transform: scale(1.1);
+            color: yellow; 
+        }
+        .yess2 h3, .yess3 h3, .yess4 h3{
+       
+            margin-top:10px;
+        }
+        .row-flez{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .ciao{
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ciao a{
+            color:white;
+            margin:10px;
+            }
+            .ciao p{
+
+                margin:10px;}
+                .navbar-logo {
+                    width:150px;
+                height: 102px;
+                margin-top: 0px;
+                margin-left: 0px;}
+        
+    </style>
+   
+    
+    
+</head>
+<body>
+    <img src="ivanilogo.png" alt="Logo" class="navbar-logo">
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="contact-info">
+            <a class="navbar-brand" href="#">
+                <img src="call.png" alt="+91-969-999-9244" width="50" height="50">
+                <span>+91-969-999-9244</span> 
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="email.png" alt="jdcbattery@gmail.com" width="50" height="50">
+                <span>jdcbattery@gmail.com</span>
+            </a>
+        </div>
+    </nav>
+
+   
+    <nav class="navbar navbar-expand-lg hi-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="product1.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Our Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="video-div">
+        <video id="video-tag" autoplay muted loop>
+            <source src="green.mp4" type="video/mp4">
+        </video>
+        <h1>Blog</h1>
+    </div>
+    <header>
+        <h1>How to Choose the Right Car Battery</h1>
+    </header>
+    <div class="container">
+        <img src="carrrrr.jpg" alt="Car Battery">
+        <h2>Introduction</h2>
+        <p>Your car battery is a crucial component of your vehicle, powering everything from the engine starter to your electronics. Choosing the right battery ensures optimal performance and prevents unexpected breakdowns.</p>
+        
+        <h2>Key Factors to Consider</h2>
+        <h3>1. Battery Size</h3>
+        <p>Select the correct group size based on your vehicle's specifications. Check your owner’s manual or consult a professional.</p>
+        
+        <h3>2. Battery Type</h3>
+        <p>Decide between conventional lead-acid batteries or maintenance-free batteries. Maintenance-free options are hassle-free but can be more expensive.</p>
+        
+        <h3>3. Cold Cranking Amps (CCA)</h3>
+        <p>Ensure the battery has sufficient CCA to start your vehicle in cold weather conditions.</p>
+        
+        <h3>4. Reserve Capacity</h3>
+        <p>Look for a battery with a high reserve capacity to power your vehicle during emergencies.</p>
+        
+        <h2>Tips for Maintenance</h2>
+        <p>Regularly clean the battery terminals, check the electrolyte level, and ensure it is securely mounted to extend its lifespan.</p>
+        
+        <h2>Conclusion</h2>
+        <p>By understanding your vehicle's requirements and the key features of car batteries, you can make an informed decision and ensure your car runs smoothly.</p>
+
+        <a href="blog.html" class="back-link">← Back to Blog</a>
+    </div>
+    <footer>
+        <div class="no">
+            <div class="yess1">
+                <img src="./ivanilogo.png" height="40" width="80">
+                <p>Delivering cutting-edge <br>technology solutions and driving<br> innovation for a smarter<br> future.</p>
+            </div>
+            <div class="yess2">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="">Automotive Batteries</a></li>
+                    <li><a href="">Invertor Batteries</a></li>
+                </ul>
+            </div>
+            <div class="yess3">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="">Tips to maintain <br>your old <br>invertor</a></li>
+                    <li><a href="">Recycling old batteries</a></li>
+                    <li><a href="">How to choose <br>the right car<br> battery</a></li>
+                </ul>
+            </div>
+            <div class="yess4">
+                <h3>Contact Us</h3>
+                <div class="flexflez">
+                    <img src="./call.png" height="40" width="40">
+                    <p>+91 1234567890</p>
+                </div>
+                <div class="flexflez">
+                    <img src="./email.png" height="40" width="40">
+                 <p>jdcbattery@gmail.com</p>
+                </div>
+            </div>
+        </div>
+       
+     <div class="ciao">
+        <p>Copyright @2024 <a href="">Ivani</a>. All rights reserved by Ivani</p>
+        <div class="row-flez">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

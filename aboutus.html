@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('modern-aesthetic-white-polygonal-background-with-a-blue-spot-vector.jpg');
+        }
+        
+        
+        .custom-navbar {
+            background-color: #8ABF14;
+            height: 45px; 
+            width: 100%; 
+            color: white; 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-brand span {
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+        .navbar-brand span:hover {
+            color: #FFC107;
+            cursor: pointer;
+        }
+        .contact-info {
+            display: flex; 
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .contact-info .navbar-brand {
+            margin-right: 20px;
+        }
+        .hi-navbar {
+            background-color: #8ABF14;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hi-navbar .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hi-navbar .nav-link {
+            color: white !important;
+            padding: 10px 25px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .hi-navbar .nav-link:hover {
+            color: #FFC107 !important;
+        }
+        .navbar-logo {
+            position: absolute;
+            top: 0;
+            left: 1px;
+            z-index: 10;
+            width: 200px;
+            height: 108px;
+        }
+        .bg h1 {
+            text-align: left;
+            margin-left: 12%;
+            margin-top: 5%;
+            font-size: 75px;
+            text-shadow: 2px 2px 5px rgba(23, 68, 2, 0.7);
+        }
+        .bg {
+            position: relative;
+            background: url('IMG-20241205-WA0012.jpg') center/cover no-repeat;
+            height: 680px;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .wrap {
+            position: relative;
+        }
+        .mor {
+            background: url('IMG-20241202-WA0021.jpg');
+            background-size: cover;
+            width: 600px;
+            height: 400px;
+            margin-top: 5%;
+            margin-left: 3%;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-image: linear-gradient(45deg, #4CAF50, #A8E6CF) 1;
+            position: absolute;
+            z-index: 1;
+        }
+        .more {
+            background: url('IMG-20241202-WA0019.jpg');
+            background-size: cover;
+            width: 450px;
+            height: 400px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(6%);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-image: linear-gradient(45deg, #4CAF50, #A8E6CF) 1;
+        }
+        .abb h1{
+            text-align: right;
+            margin-right: 40%;
+            margin-top: 5%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+          
+        }
+        .abb p{
+            text-align: left; 
+    margin-left: 40%; 
+    margin-top: 0%; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; 
+    color: black; 
+    line-height: 1.5;
+        }
+        .p1{
+            text-align: left; 
+    margin-left: 40%;
+    margin-top: 0%; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; 
+    color: black; 
+    line-height: 1.5;
+        }
+        .lo {
+    position: relative;
+    height: 200px; 
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30%;
+    background-size: cover; 
+    background-position: right; 
+    background-repeat: no-repeat; 
+    background-image: url('ssss.png'); 
+}
+
+
+
+.lo h1 {
+    position: relative;
+    z-index: 1; 
+    color: white; 
+}
+p{
+    color: white;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+}
+
+.card-icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p, .card ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+}
+.card img{
+    width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
+
+}
+
+
+@media (max-width: 480px) {
+    
+    
+
+    /* Navbar logo */
+    .navbar-logo {
+        width: 100px !important;  /* Force resizing */
+        height: 80px !important;
+        left: 0px; /* Adjust for smaller screens */
+    }
+
+    /* Custom Navbar */
+    .custom-navbar {
+        flex-direction: row; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .contact-info {
+        flex-direction: row; /* Stack contact info vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info .navbar-brand {
+        margin-right: 12px; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .contact-info img {
+        width: 20px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .contact-info .navbar-brand span {
+        font-size: 10px; /* Reduce font size */
+    }
+
+    /* Hi Navbar */
+    .hi-navbar {
+        flex-direction: row; /* Stack links vertically */
+        padding: 10px 0;
+    }
+
+    .hi-navbar .navbar-nav {
+        flex-direction: row; /* Align links vertically */
+        gap: 5px;
+    }
+
+    .hi-navbar .nav-link {
+        font-size: 12px; /* Reduce font size */
+        padding: 8px; /* Adjust padding */
+    }
+  
+        /* Hide the images inside .wrap for smaller screens */
+        .mor, .more {
+            display: none; /* Remove the images */
+        }
+
+        /* Adjust background image for 'About Us' section */
+        .bg {
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Adjust the height */
+        }
+        .bg h1 {
+            font-size: 30px; /* Reduce font size for mobile */
+            margin-left: 10%;
+            margin-top: 20%;
+        }
+
+        /* Adjust About Us text and paragraphs */
+        .abb h1 {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .abb p, .p1 {
+            font-size: 14px; /* Reduced font size */
+            margin-left: 5%;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Adjust height and text in the .lo section */
+        .lo {
+        height: 80px; /* Adjusted height */
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-size: cover;
+        background-position: right;
+        background-image: url('ssss.png');
+    }
+
+    .lo h1 {
+        font-size: 18px; /* Reduced font size */
+        color: white;
+    }
+    
+    .lo p {
+        display: none; /* Hide the paragraph completely */
+    }
+
+
+    .container {
+        display: flex; /* Use flexbox to lay out the cards horizontally */
+        flex-wrap: wrap; /* Allow the cards to wrap to the next line if needed */
+        justify-content: center; /* Center the cards horizontally */
+        margin-top: 10px; /* Adjust the top margin */
+    }
+
+    .card {
+        width: 45%; /* Set width of cards to 45% to fit two per row on small screens */
+        margin: 15px; /* Space between the cards */
+        padding: 25px; /* Increased padding for more height */
+        height: 350px; /* Increased height */
+        display: flex; /* Ensures the card is treated as a flex container */
+        flex-direction: column; /* Makes the content inside the card arranged vertically */
+    }
+
+    .card img {
+        height: 150px; /* Adjusted image height */
+        object-fit: cover; /* Ensure the image covers the area correctly */
+    }
+
+    .card h2 {
+        font-size: 18px; /* Adjust heading font size */
+    }
+
+    .card p {
+        font-size: 13px; /* Adjust paragraph font size */
+    }
+}
+
+        @media (max-width: 480px) {
+            footer {
+        margin-top: 0;
+    }
+    
+    .no {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .yess1, .yess2, .yess3, .yess4 {
+        align-items: flex-start;
+    }
+
+    .yess2 ul, .yess3 ul {
+        padding-left: 0;
+    }
+
+    .yess2 ul li, .yess3 ul li {
+        margin: 5px 0;
+    }
+
+    .yess2 h3, .yess3 h3, .yess4 h3 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .flexflez {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .row-flez {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .ciao {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ciao a {
+        margin: 5px;
+    }
+
+    .ciao p {
+        margin: 5px;
+    }
+}
+    
+
+    .container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    width: 450px; /* Set a fixed width */
+    height: 350px; /* Set a fixed height for consistent alignment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Prevent content overflow */
+    text-overflow: ellipsis; /* Add ellipsis for text overflow */
+}
+
+.card-icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p, .card ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+}
+.card img{
+    width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
+
+  
+}
+footer{
+            
+            height: auto;
+            width:100%;
+            background-color: #243206 ;
+            color:white;
+            position:relative;
+            bottom:0;
+            right:0;
+            margin-top: 500px;
+        }
+        .no{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .yess1{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: transform 0.5s ease;
+        }
+        .yess2, .yess3, .yess4{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+      
+        }
+        .yess1 p, img{
+            margin:10px;
+        }
+        .yess2 ul li a, .yess3 ul li a{
+            list-style: none;
+            color:white;
+            text-decoration: none;
+            margin-bottom:5px;
+            display: inline-block;
+            transition:transform 0.5s ease;
+        }
+      
+        .yess2 h3, .yess3 h3, .yess4 h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .flexflez{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .yess2 ul li a:hover, 
+        .yess3 ul li a:hover {
+            transform: scale(1.1);
+            color: yellow; 
+        }
+        .yess2 h3, .yess3 h3, .yess4 h3{
+       
+            margin-top:10px;
+        }
+        .row-flez{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .ciao{
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ciao a{
+            color:white;
+            margin:10px;
+            }
+            .ciao p{
+
+                margin:10px;}
+
+                .navbar-logo {
+               width:150px;
+                height: 109px;
+                margin-top: 0px;
+                margin-left: 0px;
+        }
+      
+        .display {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+          }
+          #product {
+      
+            cursor: pointer;
+          }
+          .dropdown {
+            background-color: #8ABF14;
+            width: fit-content;
+            display: none;
+            position: absolute; 
+            border:1px solid black;
+    top: 100%; 
+    left: 60px; 
+    z-index: 100; 
+            z-index: 100; 
+            border-radius: 5px; 
+        }
+        
+          .dropdown ul {
+            list-style-type: none;
+            padding: 10px;
+            padding-bottom: 20px;
+            margin: 0;
+            font-size: 12px;
+          }
+          .dropdown ul li {
+            padding: 0px;
+            margin: 0;
+            font-size: 18px;
+       
+          }
+          .dropdown ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            display: block;
+          }
+          .dropdown ul li a:hover {
+            background-color: #243206;
+            color: white;
+          }
+
+
+
+
+    </style>
+</head>
+<body>
+    <img src="ivanilogo.png" alt="Logo" class="navbar-logo">
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="contact-info">
+            <a class="navbar-brand" href="#">
+                <img src="call.png" alt="+91-969-999-9244" width="50" height="50">
+                <span>+91-969-999-9244</span> 
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="email.png" alt="jdcbattery@gmail.com" width="50" height="50">
+                <span>jdcbattery@gmail.com</span>
+            </a>
+        </div>
+    </nav>
+
+   
+    <nav class="navbar navbar-expand-lg hi-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About Us</a>
+            </li>
+            <div class="display">
+                <li class="nav-item">
+                    <a href="product1.html" class="nav-link" id="product">Products</a>
+                </li>
+                <div class="dropdown">
+                    <ul>
+                      <li><a href="i.html">Invertor Batteries</a></li>
+                      <li><a href="./product1.html">Automotive Batteries</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Our Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="bg">
+        <h1>About Us</h1>
+    </div>
+
+    <div class="wrap">
+        <div class="mor">
+            <div class="more"></div>
+        </div>
+    </div>
+
+    <div class="abb">
+        <h1>About Ivani</h1>
+        <p>Ivani is a premier provider of automotive battery solutions, dedicated to powering vehicles with unmatched reliability and performance. As a trusted name in the industry, we specialize in offering a wide range of high-quality, durable batteries designed to meet the needs of both personal and commercial vehicles.</p>
+        <p class="p">We pride ourselves on our commitment to excellence and customer satisfaction, offering products that are as reliable as the vehicles they power. With Ivani, you're not just getting a battery – you're investing in the future of automotive energy.</p>
+    </div>
+
+
+    <div class="lo">
+        <h1>WE PROVIDE YOU WITH EXCEPTIONAL PRODUCTS.</h1>
+        <p>Before the final product reaches our customers, it undergoes several quality tests at every stage of production. These tests are conducted using advanced, high-tech machinery, ensuring our products meet the highest standards. This focus on quality is what makes Solance trusted across India. giveme a similar line to this</p>
+
+    </div>
+
+    <div class="container">
+    <div class="card">
+      <img src="mission.png" alt="Mission Icon" >
+      <h2>Our Mission</h2>
+      <p>Delivering sustainable and innovative energy solutions to empower a greener tomorrow.</p>
+    </div>
+    <div class="card">
+      <img src="vision.webp" alt="Vision Icon" >
+      <h2>Our Vision</h2>
+      <p>Empowering the future with cutting-edge, sustainable automotive energy solutions.</p>
+    </div>
+    <div class="card">
+      <img src="core.jpg" alt="Core Values Icon" >
+      <h2>Core Values</h2>
+      <ul>
+        <li>Sustainability</li>
+        <li>Ownership</li>
+        <li>Loyalty</li>
+       
+       
+        <li>Commitment</li>
+        <li>Excellence</li>
+      </ul>
+    </div>
+  </div>
+
+
+  </div>
+<footer>
+  <div class="no">
+    <div class="yess1">
+        <img src="./ivanilogo.png" height="40" width="80">
+        <p>Delivering cutting-edge <br>technology solutions and driving<br> innovation for a smarter<br> future.</p>
+    </div>
+    <div class="yess2">
+        <h3>Products</h3>
+        <ul>
+            <li><a href="">Automotive Batteries</a></li>
+            <li><a href="">Invertor Batteries</a></li>
+        </ul>
+    </div>
+    <div class="yess3">
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="">Tips to maintain <br>your old <br>invertor</a></li>
+            <li><a href="">Recycling old batteries</a></li>
+            <li><a href="">How to choose <br>the right car<br> battery</a></li>
+        </ul>
+    </div>
+    <div class="yess4">
+        <h3>Contact Us</h3>
+        <div class="flexflez">
+            <img src="./call.png" height="40" width="40">
+            <p>+91 1234567890</p>
+        </div>
+        <div class="flexflez">
+            <img src="./email.png" height="40" width="40">
+         <p>jdcbattery@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+<div class="ciao">
+<p>Copyright @2024 <a href="">Ivani</a>. All rights reserved by Ivani</p>
+<div class="row-flez">
+    <a href="">Privacy Policy</a>
+    <a href="">Terms of Use</a>
+</div>
+</div>
+</footer>
+
+<style>
+   
+</style>
+</body>
+<script>
+        
+    const animatedElements = document.querySelectorAll('.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12');
+
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); 
+            } else {
+                entry.target.classList.remove('visible'); 
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+ 
+    animatedElements.forEach(el => observer.observe(el));
+
+
+    document.addEventListener('DOMContentLoaded', function(){
+        var product = document.getElementById('product');
+        var dropdown = document.querySelector('.dropdown');
+
+        product.addEventListener('mouseenter', function(){
+          dropdown.style.display = 'block';
+        });
+  
+
+        product.addEventListener('mouseleave', function(){
+          setTimeout(function(){
+            if (!dropdown.matches(':hover')) {
+              dropdown.style.display = 'none';
+            }
+          }, 100); 
+        });
+  
+      
+        dropdown.addEventListener('mouseenter', function() {
+          dropdown.style.display = 'block';
+        });
+  
+        dropdown.addEventListener('mouseleave', function(){
+          dropdown.style.display = 'none';
+        });
+      });
+</script>
+</html>
